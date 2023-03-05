@@ -1,0 +1,41 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <link rel="stylesheet" href="flaggenerator.css">
+    <title>Flag generator</title>
+</head>
+<body>
+
+  
+    <h1 class="heading">Welcome to Flag generator</h1>
+    
+    <div id="box1" class="boxa"></div>
+	<div id="box2" class="boxb"></div>
+	<div id="box3" class="boxc"></div>
+	<button class="button" onclick="changeColors()">Click to Change!</button>
+
+
+
+    <script>
+		function getRandomColor() {
+			var min = 0;
+			var max = 255;
+			var r = Math.floor(Math.random() * (max - min + 1)) + min;
+			var g = Math.floor(Math.random() * (max - min + 1)) + min;
+			var b = Math.floor(Math.random() * (max - min + 1)) + min;
+			return "rgb(" + r + "," + g + "," + b + ")";
+		}
+
+		function changeColors() {
+			var box1 = document.getElementById("box1");
+			var box2 = document.getElementById("box2");
+			var box3 = document.getElementById("box3");
+
+			box1.style.backgroundColor = getRandomColor();
+			box2.style.backgroundColor = getRandomColor();
+			box3.style.backgroundColor = getRandomColor();
+		}
+	</script>
+</body>
+
+
